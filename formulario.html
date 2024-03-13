@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Lugar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('assets/img/principal.webp'); /* Reemplaza 'assets/img/principal.webp' con la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            height: 100vh;
+            text-align: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-around;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* Texto blanco */
+            margin-bottom: 20px; /* Añade un espacio entre el título y el formulario */
+        }
+
+        form {
+            background-color: rgba(88, 195, 214, 0.8); /* Fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+            width: 80%; /* Ancho del formulario */
+            max-width: 500px; /* Ancho máximo */
+            margin-bottom: 20px; /* Añade espacio entre el formulario y el enlace de volver al índice */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Azul */
+            color: #fff; /* Texto blanco */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+        .yy {
+  color: rgb(253, 253, 253);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+    <h1>Reserva de Lugar</h1> <!-- Título añadido aquí -->
+    <form action="https://formspree.io/f/xpzvlorl" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="fecha">Fecha de reserva:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="mensaje">Mensaje adicional:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <a href="index.html" class="yy">Volver al índice</a> <!-- Enlace para volver al índice -->
+</body>
+</html>
